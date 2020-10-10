@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="main-body">
+    <nav id="navbar">
+      <header>JS Documentation</header>
+      <a href="#JavaScript_Introduction" class="nav-link">JavaScript Introduction</a>
+      <a href="#Javascript_Booleans" class="nav-link">Javascript Booleans</a>
+      <a href="#Javascript_variables" class="nav-link">Javascript variables</a>
+      <a href="#JavaScript_Scope" class="nav-link">JavaScript Scope</a>
+      <a href="#JavaScript_Functions" class="nav-link">JavaScript Functions</a>
+
+    </nav>
+
+    <main id="main-doc">
+
+      <section class="main-section" id="JavaScript_Introduction">
+        <header>JavaScript Introduction</header>
+        <p>JavaScript Can Change HTML Content
+        One of many JavaScript HTML methods is getElementById().
+        The example below "finds" an HTML element (with id="demo"), and changes the element content (innerHTML) to "Hello JavaScript":</p>
+        <code>document.getElementById("demo").innerHTML = "Hello JavaScript";</code>
+        <p>JavaScript accepts both double and single quotes:</p>
+        <code>document.getElementById('demo').innerHTML = 'Hello JavaScript';</code>
+        <p>JavaScript Can Change HTML Attribute Values</p>
+        <p>JavaScript Can Change HTML Styles (CSS)
+          Changing the style of an HTML element, is a variant of changing an HTML attribute:</p>
+        <code>document.getElementById("demo").style.fontSize = "35px";</code>
+        <p>JavaScript Can Hide HTML Elements
+            Hiding HTML elements can be done by changing the display style:</p>
+        <code>document.getElementById("demo").style.display = "none";</code>
+        <p>JavaScript Can Show HTML Elements
+          Showing hidden HTML elements can also be done by changing the display style:</p>
+        <code>document.getElementById("demo").style.display = "block";</code>
+        <p>Did You Know?
+        JavaScript and Java are completely different languages, both in concept and design.
+
+        JavaScript was invented by Brendan Eich in 1995, and became an ECMA standard in 1997.
+
+        ECMA-262 is the official name of the standard. ECMAScript is the official name of the language.
+
+        </p>
+        <ul>
+          <li>JacaScript Introduction</li>
+          <li>JacaScript Booleans</li>
+          <li>JacaScript variables</li>
+          <li>JacaScript Scope</li>
+          <li>JacaScript Functions</li>
+        </ul>
+      </section>
+      <section class="main-section" id="Javascript_Booleans">
+        <header>Javascript Booleans</header>
+        <p>A JavaScript Boolean represents one of two values: true or false.
+
+          Boolean Values
+          Very often, in programming, you will need a data type that can only have one of two values, like
+
+          YES / NO
+          ON / OFF
+          TRUE / FALSE
+          For this, JavaScript has a Boolean data type. It can only take the values true or false.
+
+          The Boolean() Function
+          You can use the Boolean() function to find out if an expression (or a variable) is true:</p>
+          <code>Boolean(10 > 9)        // returns true</code>
+          <p>Or even easier:</p>
+          <code>(10 > 9)              // also returns true
+          10 > 9                // also returns true</code>
+          <p>Comparisons and Conditions
+          The chapter JS Comparisons gives a full overview of comparison operators.
+
+          The chapter JS Conditions gives a full overview of conditional statements.</p>
+          <p>Everything With a "Value" is True</p>
+          <code>100
+
+        3.14
+
+        -15
+
+        "Hello"
+
+        "false"
+
+        7 + 1 + 3.14
+        </code>
+        <p>Everything Without a "Value" is False
+        The Boolean value of 0 (zero) is false:</p>
+        <code>var x = 0;
+        Boolean(x);       // returns false</code>
+        <p>Booleans Can be Objects
+      Normally JavaScript booleans are primitive values created from literals:
+
+      var x = false;
+
+      But booleans can also be defined as objects with the keyword new:
+
+      var y = new Boolean(false);</p>
+      <code>var x = false;
+      var y = new Boolean(false);
+
+      // typeof x returns boolean
+      // typeof y returns object</code>
+      <p>Do not create Boolean objects. It slows down execution speed.
+      The new keyword complicates the code. This can produce some unexpected results:
+
+      When using the == operator, equal booleans are equal:</p>
+      <code>var x = false;
+      var y = new Boolean(false);
+
+      // (x == y) is true because x and y have equal values</code>
+
+      </section>
+      <section class="main-section" id="Javascript_variables">
+        <header>Javascript variables</header>
+        <p>JavaScript variables are containers for storing data values.
+
+          In this example, x, y, and z, are variables, declared with the var keyword:</p>
+          <code>var x = 5;
+          var y = 6;
+          var z = x + y;</code>
+        <p>From the example above, you can expect:
+
+          x stores the value 5
+          y stores the value 6
+          z stores the value 11</p>
+          <p>Using let and const (2015)
+          Before 2015, using the var keyword was the only way to declare a JavaScript variable.
+
+          The 2015 version of JavaScript (ES6 - ECMAScript 2015) allows the use of the const keyword to define a variable that cannot be reassigned, and the let keyword to define a variable with restricted scope.
+
+          Because it is a little complicated to describe the difference between these keywords, and because they are not supported in older browsers, the first part of this tutorial will most often use var.</p>
+          <p>Much Like Algebra
+              In this example, price1, price2, and total, are variables:</p>
+        <code>var price1 = 5;
+        var price2 = 6;
+        var total = price1 + price2;</code>
+        <p>In programming, just like in algebra, we use variables (like price1) to hold values.
+
+        In programming, just like in algebra, we use variables in expressions (total = price1 + price2).
+
+        From the example above, you can calculate the total to be 11.
+
+        JavaScript variables are containers for storing data values.</p>
+        <p>JavaScript Identifiers
+        All JavaScript variables must be identified with unique names.
+
+        These unique names are called identifiers.
+
+        Identifiers can be short names (like x and y) or more descriptive names (age, sum, totalVolume).
+
+        The general rules for constructing names for variables (unique identifiers) are:
+
+        Names can contain letters, digits, underscores, and dollar signs.
+        Names must begin with a letter
+        Names can also begin with $ and _ (but we will not use it in this tutorial)
+        Names are case sensitive (y and Y are different variables)
+        Reserved words (like JavaScript keywords) cannot be used as names
+        JavaScript identifiers are case-sensitive.
+
+        The Assignment Operator
+        In JavaScript, the equal sign (=) is an "assignment" operator, not an "equal to" operator.
+
+        This is different from algebra. The following does not make sense in algebra:</p>
+        <code>x = x + 5</code>
+        <p>In JavaScript, however, it makes perfect sense: it assigns the value of x + 5 to x.
+
+        (It calculates the value of x + 5 and puts the result into x. The value of x is incremented by 5.)
+
+        The "equal to" operator is written like == in JavaScript.
+        JavaScript Data Types
+        JavaScript variables can hold numbers like 100 and text values like "John Doe".
+
+        In programming, text values are called text strings.
+
+        JavaScript can handle many types of data, but for now, just think of numbers and strings.
+
+        Strings are written inside double or single quotes. Numbers are written without quotes.
+
+        If you put a number in quotes, it will be treated as a text string.</p>
+        <code>var pi = 3.14;
+        var person = "John Doe";
+        var answer = 'Yes I am!';
+        </code>
+      </section>
+      <section class="main-section" id="JavaScript_Scope">
+        <header>JavaScript Scope</header>
+        <p>Scope determines the accessibility (visibility) of variables.</p>
+        <p>JavaScript Function Scope
+          In JavaScript there are two types of scope:
+
+          Local scope
+          Global scope
+          JavaScript has function scope: Each function creates a new scope.
+
+          Scope determines the accessibility (visibility) of these variables.
+
+          Variables defined inside a function are not accessible (visible) from outside the function.
+
+          Local JavaScript Variables
+          Variables declared within a JavaScript function, become LOCAL to the function.
+
+          Local variables have Function scope: They can only be accessed from within the function.</p>
+        <code>// code here can NOT use carName
+
+        function myFunction() {
+          var carName = "Volvo";
+
+          // code here CAN use carName
+
+        }</code>
+      <p>Since local variables are only recognized inside their functions, variables with the same name can be used in different functions.
+
+        Local variables are created when a function starts, and deleted when the function is completed.
+
+      </p>
+      <p>Global JavaScript Variables
+      A variable declared outside a function, becomes GLOBAL.
+
+      A global variable has global scope: All scripts and functions on a web page can access it. </p>
+      <code>var carName = "Volvo";
+
+      // code here can use carName
+
+      function myFunction() {
+
+        // code here can also use carName
+
+      }</code>
+      <p>JavaScript Variables
+      In JavaScript, objects and functions are also variables.
+      Scope determines the accessibility of variables, objects, and functions from different parts of the code.
+      Automatically Global
+      If you assign a value to a variable that has not been declared, it will automatically become a GLOBAL variable.
+
+      This code example will declare a global variable carName, even if the value is assigned inside a function.</p>
+      <code>myFunction();
+
+      // code here can use carName
+
+      function myFunction() {
+        carName = "Volvo";
+      }</code>
+      <p>Strict Mode
+      All modern browsers support running JavaScript in "Strict Mode".
+
+      You will learn more about how to use strict mode in a later chapter of this tutorial.
+
+      In "Strict Mode", undeclared variables are not automatically global.
+
+      Global Variables in HTML
+      With JavaScript, the global scope is the complete JavaScript environment.
+
+      In HTML, the global scope is the window object. All global variables belong to the window object.</p>
+      <code>var carName = "Volvo";
+
+      // code here can use window.carName</code>
+      <p>Warning
+      Do NOT create global variables unless you intend to.
+
+      Your global variables (or functions) can overwrite window variables (or functions).
+      Any function, including the window object, can overwrite your global variables and functions.
+
+      The Lifetime of JavaScript Variables
+      The lifetime of a JavaScript variable starts when it is declared.
+
+      Local variables are deleted when the function is completed.
+
+      In a web browser, global variables are deleted when you close the browser window (or tab).
+
+      Function Arguments
+      Function arguments (parameters) work as local variables inside functions.</p>
+
+      </section>
+      <section class="main-section" id="JavaScript_Functions">
+        <header>JavaScript Functions</header>
+        <p>A JavaScript function is a block of code designed to perform a particular task.
+          A JavaScript function is executed when "something" invokes it (calls it).</p>
+          <code>function myFunction(p1, p2) {
+          return p1 * p2;   // The function returns the product of p1 and p2
+          }</code>
+        <p>JavaScript Function Syntax
+        A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().
+
+        Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).
+
+        The parentheses may include parameter names separated by commas:
+        (parameter1, parameter2, ...)
+
+        The code to be executed, by the function, is placed inside curly brackets: {}</p>
+        <code>function name(parameter1, parameter2, parameter3) {
+          // code to be executed
+        }</code>
+        <p>Function parameters are listed inside the parentheses () in the function definition.
+
+        Function arguments are the values received by the function when it is invoked.
+
+        Inside the function, the arguments (the parameters) behave as local variables.
+
+        A Function is much the same as a Procedure or a Subroutine, in other programming languages.
+
+        Function Invocation
+        The code inside the function will execute when "something" invokes (calls) the function:
+
+        When an event occurs (when a user clicks a button)
+        When it is invoked (called) from JavaScript code
+        Automatically (self invoked)
+        You will learn a lot more about function invocation later in this tutorial.
+
+
+        Function Return
+        When JavaScript reaches a return statement, the function will stop executing.
+
+        If the function was invoked from a statement, JavaScript will "return" to execute the code after the invoking statement.
+
+        Functions often compute a return value. The return value is "returned" back to the "caller":</p>
+        <code>var x = myFunction(4, 3);   // Function is called, return value will end up in x
+
+        function myFunction(a, b) {
+          return a * b;             // Function returns the product of a and b
+        }</code>
+        <p>The result in x will be:12</p>
+      </section>
+
+    </main>
+  </div>
+  </body>
+</html>
